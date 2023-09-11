@@ -81,7 +81,7 @@ student@student-VirtualBox:~/Desktop$ sudo apt install git
 ### Step 4: Clone your remote repository to your VM
 
 ```bash
-   student@student-VirtualBox:~$ git clone git@git.dc.turkuamk.fi:YOUR-NAMESPACE/embedded-linux-labs.git
+   student@student-VirtualBox:~$ git clone git@git.dc.turkuamk.fi:YOUR-NAMESPACE/lab_exercises.git
 ```
 If gitlab asks for credentials, then your SSH keys setting has failed.  
 You should now have a local git repository containing all lab assignments and files, linked to a private remote repository in TUAS gitlab. 
@@ -89,4 +89,11 @@ You should now have a local git repository containing all lab assignments and fi
 ### Step 5: git
 
 All your lab work will end up in your git repository, so it is necessary develop git skills as well.  
-Check the material and exercises [on this page](git_tutorial.md)
+Check the material and exercises [on this page](git_tutorial.md) (<- link to be fixed!)
+
+### Step 6: Continue LAB1
+
+You will find the step-by-step instructions to rest of the LAB1 in OneNote: 
+
+https://tuas365.sharepoint.com/sites/VHDLandFPGA/_layouts/15/Doc.aspx?sourcedoc={81d9f9be-bace-447b-8090-38fa0295e281}&action=edit&wd=target%28_Content%20Library%2FLab%201%20%20-%20Installation.one%7Ca745a153-ea3f-4b6e-8f16-9163bfe64932%2FVHDL%20LAB1%7C3582f69e-48ce-4b8c-ab8a-793932282648%2F%29&wdorigin=703
+
