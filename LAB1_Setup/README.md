@@ -35,7 +35,7 @@ Import VM to VirtualBox. (Import Appliance...)
 Modify configuration:
 - "Bridged" network is recommended. You need to attach the bridge to your Ethernet network interface card.
 - Check the amount of CPU cores and memory allocated for the VM. 4 cores + 8GB RAM should do, but more is better.
-- VM user/passwd is student/student
+- <b>VM user/passwd is student/student</b>
 
 Check that you can start the VM, log in and have Ubuntu desktop running with internet connectivity.
 
@@ -49,6 +49,19 @@ Please add user `jarno.tuominen` to the project with "Reporter" role.
 ### Step 3: Customize VM
 
 The installed VM is naturally the same for all students, but will want to use your own identity to sync with TUAS gitlab repository. 
+
+First, check if git is installed, and install if needed: 
+
+student@student-VirtualBox:~/Desktop$ git
+
+Command 'git' not found, but can be installed with:
+
+sudo apt install git
+
+student@student-VirtualBox:~/Desktop$ sudo apt install git
+
+
+
 - Configure git identity
 ```bash
    student@student-VirtualBox:~$ git config --global user.name "Mona Lisa"
