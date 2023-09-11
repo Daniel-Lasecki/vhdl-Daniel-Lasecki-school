@@ -16,7 +16,7 @@ A version history consists of sequence of <b>commits</b>. Each commit is a set o
 
 ## Lab assignment 1
 
-Study the videos below and answer to questions into file `embedded-linux-labs/lab1/git-study.md`  
+Study the videos below and answer to questions into file `lab_exercises/LAB1_Setup/git-study.md`
 In this case it makes sense to create the file and write the answers using TUAS gitlab web interface to your personal repository. 
 
 https://git-scm.com/video/what-is-version-control (5:58)  
@@ -38,7 +38,7 @@ GitLab (like GitHub) is a <b>DevOps lifecycle tool</b>. It adds software product
 
 ## Lab assignment 2
 
-Study the videos below and append your answers into file `embedded-linux-labs/lab1/git-study.md`  
+Study the videos below and append your answers into file `lab_exercises/LAB1_Setup/git-study.md`
 
 [Introduction to GitLab](https://youtu.be/_4SmIyQ5eis?t=90) (59:51)  
 Q4: Explain "GitLab Recommended Process"  
