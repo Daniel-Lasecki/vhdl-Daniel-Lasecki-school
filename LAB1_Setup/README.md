@@ -60,7 +60,7 @@ Command 'git' not found, but can be installed with:
 sudo apt install git
 
 student@student-VirtualBox:~/Desktop$ sudo apt install git
-'''
+```
 
 
 - Configure git identity
