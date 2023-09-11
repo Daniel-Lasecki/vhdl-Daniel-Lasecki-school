@@ -89,7 +89,7 @@ You should now have a local git repository containing all lab assignments and fi
 ### Step 5: git
 
 All your lab work will end up in your git repository, so it is necessary develop git skills as well.  
-Check the material and exercises [on this page](git_tutorial.md) (<- link to be fixed!)
+Check the material and exercises [on this page](git_tutorial.md)
 
 ### Step 6: Continue LAB1
 
