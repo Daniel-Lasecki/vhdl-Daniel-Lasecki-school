@@ -52,6 +52,7 @@ The installed VM is naturally the same for all students, but will want to use yo
 
 First, check if git is installed, and install if needed: 
 
+```bash
 student@student-VirtualBox:~/Desktop$ git
 
 Command 'git' not found, but can be installed with:
@@ -59,7 +60,7 @@ Command 'git' not found, but can be installed with:
 sudo apt install git
 
 student@student-VirtualBox:~/Desktop$ sudo apt install git
-
+'''
 
 
 - Configure git identity
