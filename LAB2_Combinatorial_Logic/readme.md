@@ -1,4 +1,4 @@
-#LAB2 - combinatorial logic
+# LAB2 - combinatorial logic
 
 
 You will find the instructions for the second lab in Onenote:
