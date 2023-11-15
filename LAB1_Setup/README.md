@@ -1,5 +1,8 @@
 # VHDL / FPGA course lab setup
 
+
+lab1 progress
+
 ## Introduction
 
 In this course we will learn fundamentals of digital design in VHDL language by implementing several designs on a FPGA-chip. In order to do that, we need a toolset, consisting of (at least):
