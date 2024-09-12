@@ -1,8 +1,10 @@
 # Ignore everything inside any Source directory
 Source/**
 
+<<<<<<< HEAD
 # Except 'vhdl' and 'constr' subdirectories and their contents
 !Source/vhdl/
 !Source/constr/
 !Source/vhdl/**
 !Source/constr/**
+=======
