@@ -1,15 +1,12 @@
-# Ignore everything in LAB1
-LAB1/*
+# Ignore everything by default
+**
 
-# But include the Source directory and its subdirectories
-!LAB1/Source/
-!LAB1/Source/constr/
-!LAB1/Source/vhdl/
+# Allow only the Source directory and its contents
+!LAB*/Source/
+!LAB*/Source/vhdl/
+!LAB*/Source/constr/
 
-# Ignore specific unwanted directories and files in LAB1
-LAB1/LAB1.cache/
-LAB1/LAB1.hw/
-LAB1/LAB1.ip_user_files/
-LAB1/LAB1.sim/
-LAB1/LAB1.xpr
-LAB1/README.md
+# Ignore all files in the Source directory, except those in vhdl and constr
+LAB*/Source/**/*
+!LAB*/Source/vhdl/**
+!LAB*/Source/constr/**
