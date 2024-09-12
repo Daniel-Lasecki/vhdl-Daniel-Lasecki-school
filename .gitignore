@@ -1,15 +1,8 @@
-# Ignore everything by default
-**
+# Ignore everything inside any Source directory
+Source/**
 
-# Allow all main lab folders with any name that starts with LAB (e.g., LAB1_Setup, LAB2_Combinatorial_Logic)
-!LAB*/
-
-# Allow the Source directory and its contents in each lab folder
-!LAB*/Source/
-!LAB*/Source/vhdl/
-!LAB*/Source/constr/
-
-# Ignore all files inside the Source directories except for the allowed folders
-LAB*/Source/**/*
-!LAB*/Source/vhdl/**
-!LAB*/Source/constr/**
+# Except 'vhdl' and 'constr' subdirectories and their contents
+!Source/vhdl/
+!Source/constr/
+!Source/vhdl/**
+!Source/constr/**
