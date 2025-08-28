@@ -1,10 +1,6 @@
 # VHDL / FPGA course lab setup
 
 
-lab1 progress
-
-IT WÖÖÖRKS!
-
 ## Introduction
 
 In this course we will learn fundamentals of digital design in VHDL language by implementing several designs on a FPGA-chip. In order to do that, we need a toolset, consisting of (at least):
@@ -32,6 +28,8 @@ For VHDL/FPGA-course lab works you need to have
 ## Lab assignment
 
 ### Step 1: Install VM
+
+STOP HERE - NEW VM IMAGE IS UNDER CONSTRUCTION
 
 Download VM image from emblab ftp server ftp://172.27.0.40/VHDL_FPGA/Ubuntu_TUAS_VHDL.ova (for this you need to be connected to lab Ethernet socket - DO NOT use WiFi, because the network will choke fur sure!). Just copy the URL to Windows (or Linux) File Manager address bar. Browsers do not support insecure FTP any more.
 
