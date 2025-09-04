@@ -49,6 +49,8 @@ You can (and probably want) to delete the .ova-file after importing the virtual 
 Log into TUAS gilab https://git.dc.turkuamk.fi/ and in main menu, switch to Groups / TUAS_VHDL_FPGA / Student Material. In that group there is repository `lab_exercises`. Create a private <b>fork</b> to your personal namespace. A fork is a copy of a project. Forking a repository allows you to make changes without affecting the original project. This forked project works as your return repository.  
 Please add user `jarno.tuominen` to the project with "Reporter" role.
 
+Also, add a topic "DIGSYS_2025" to your repo by going to settings -> general -> project topics. (Pick the correct one from the list.)
+
 ### Step 3: Customize VM
 
 The installed VM is naturally the same for all students, but will want to use your own identity to sync with TUAS gitlab repository. 
