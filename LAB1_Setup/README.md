@@ -1,5 +1,6 @@
 # VHDL / FPGA course lab setup
 
+
 ## Introduction
 
 In this course we will learn fundamentals of digital design in VHDL language by implementing several designs on a FPGA-chip. In order to do that, we need a toolset, consisting of (at least):
@@ -15,6 +16,8 @@ Such a toolset for FPGAs is vendor-dependent - at least from place and route to 
 
 The size of the development tool chain is quite huge - the minimum installation at the moment is roughly 50 gigabytes. In order to make the installation process easier across different platforms (Windows/Linux/Mac), a virtual machine approach is taken.
 
+In case you are running out of hard disk space, the cheapest way forward is to purchase an external hard disk (SSD preferred) or even a USB stick. Google for'em.
+
 
 ## Overview of lab setup
 
@@ -28,7 +31,7 @@ For VHDL/FPGA-course lab works you need to have
 
 ### Step 1: Install VM
 
-Download VM image from emblab ftp server ftp://172.27.0.40/VHDL_FPGA/Ubuntu_TUAS_VHDL.ova (for this you need to be connected to lab Ethernet socket - DO NOT use WiFi, because the network will choke fur sure!). Just copy the URL to Windows (or Linux) File Manager address bar. Browsers do not support insecure FTP any more.
+Download VM image from emblab ftp server ftp://172.27.0.40/VHDL_FPGA/ the file name is Ubuntu_TUAS_VHDL.ova . For this you need to be connected to lab Ethernet socket - DO NOT use WiFi, because the network will choke for sure!. Just copy the URL to Windows (or Linux) File Manager address bar. Note that web browsers do not support insecure FTP any more.
 
 Import VM to VirtualBox. (Import Appliance...)
 
@@ -45,6 +48,8 @@ You can (and probably want) to delete the .ova-file after importing the virtual 
 
 Log into TUAS gilab https://git.dc.turkuamk.fi/ and in main menu, switch to Groups / TUAS_VHDL_FPGA / Student Material. In that group there is repository `lab_exercises`. Create a private <b>fork</b> to your personal namespace. A fork is a copy of a project. Forking a repository allows you to make changes without affecting the original project. This forked project works as your return repository.  
 Please add user `jarno.tuominen` to the project with "Reporter" role.
+
+Also, add a topic "DIGSYS_2025" to your repo by going to settings -> general -> project topics. (Pick the correct one from the list.)
 
 ### Step 3: Customize VM
 
