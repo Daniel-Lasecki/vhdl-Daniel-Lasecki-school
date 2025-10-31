@@ -1,16 +1,16 @@
 ----------------------------------------------------------------------------------
--- Company: Very Boring Company
--- Engineer: Psemppa
+-- Company: Unemployed :DDDDDDDDDDDDD
+-- Engineer: 
 -- 
 -- Create Date: 08/09/2019 10:47:12 AM
 -- Design Name: 
 -- Module Name: led_thingy_top - Behavioral
--- Project Name: led_thingy_top
--- Target Devices: 7000 PYQN-Z2
+-- Project Name: 
+-- Target Devices: 
 -- Tool Versions: 
 -- Description: 
 -- 
--- Dependencies: IEEE
+-- Dependencies: 
 -- 
 -- Revision:
 -- Revision 0.01 - File Created
@@ -47,7 +47,8 @@ architecture Behavioral of led_thingy_top is
 begin
 
     -- buttons directly mapped to red leds
-    led <= not btn;
+    led <= decoder_result;
+    decoder_out <= decoder_result;
  
     -- Some "housekeeping" first
     -- map signal "RGB_Led_4" to actual output ports
@@ -59,20 +60,33 @@ begin
     led5_r <= RGB_Led_5(2);
     led5_g <= RGB_Led_5(1);
     led5_b <= RGB_Led_5(0);
-            
-                
-    -- Control of RGB LED 4
-    with btn(3 downto 0) select
-        RGB_Led_4 <=    "001" when "0001", --red
-                        "010" when "0010", --green
-                        "100" when "0100", --blue
-                        "000" when others; --off
+ 
+    decoder_result <= -- 2:4 decoder
+        "1000" when (sw(0) = '1' and btn = "00") else -- led[3] in
+        "1110" when (sw(0) = '1' and btn = "01") else -- led[3-1] on
+        "1110" when (sw(0) = '1' and btn = "10") else -- led[3-1] on
+        "0101" when (sw(0) = '1' and btn = "11") else -- led[2 and 0] on
+        
+      
+        "0001" when (sw(0) = '0' and btn = "00") else -- led[0] on (RGB off)
+        "0010" when (sw(0) = '0' and btn = "01") else -- led[1] on (RGB red)
+        "0100" when (sw(0) = '0' and btn = "10") else -- led[2] on (RGB green)
+        "1000" when (sw(0) = '0' and btn = "11") else -- led[3] on (RGB blue)
+        
+    
+    
+    with btn select
+        RGB_Led_4 <=    "000" when "00", -- off
+                        "100" when "01", -- red
+                        "010" when "10", -- green 
+                        "001" when "11", -- blue
+                        "000" when others; 
                         
-    -- Control of RGB LED 5
-         with btn(3 downto 0) select
-            RGB_Led_5 <=    "111" when "0000", --white
-                            "000" when "1111", --off
-                            "111" when others; -- -> no spec, let's keep it white                        
-           
+    
+    
+    RGB_Led_5 <=
+        "111" when sw(1) = '1' else          -- sw 1 white         ---- remember sw(0) and sw(1) diff inputs
+        RGB_Led_4 when sw(0) = '1' else      -- acts as led 4 
+        "000";                               -- off     
                         
 end Behavioral;
