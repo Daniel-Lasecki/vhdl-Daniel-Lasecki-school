@@ -47,7 +47,14 @@ architecture Behavioral of led_thingy_top is
 begin
 
     -- buttons directly mapped to red leds
-    led <= not btn;
+    -- led <= not btn;
+
+    -- led mapping directly to  buttons
+    led(0) <= btn(0);
+    led(1) <= btn(1);
+    led(2) <= btn(2);
+    led(3) <= btn(3);
+
  
     -- Some "housekeeping" first
     -- map signal "RGB_Led_4" to actual output ports
