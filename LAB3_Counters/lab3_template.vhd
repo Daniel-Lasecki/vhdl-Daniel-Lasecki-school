@@ -4,7 +4,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity integer_test is
     Port ( sysclk : in std_logic;
-           btn : in std_logic_vector(0 downto 0); -- we don't have reset-button in zynq, using btn(0) instead
+           --btn : in std_logic_vector(0 downto 0); -- we don't have reset-button in zynq, using btn(0) instead
            ja : out STD_LOGIC_VECTOR (7 downto 0);
            jb : out STD_LOGIC_VECTOR (7 downto 0)
            );
@@ -19,20 +19,20 @@ architecture rtl of integer_test is
     -- Now, just faking a reset which is always high = inactive
     -- This way our design is cleaner and we can take the reset in use later on
     
-    signal n_Reset: std_logic := '1'; -- for simulation, initialize to high = inactive
+    --signal n_Reset: std_logic := '1'; -- for simulation, initialize to high = inactive
 
 
 begin
     
-    n_Reset <= not btn(0);
+    --n_Reset <= not btn(0);
     --n_Reset <= '1'; --fake reset, always inactive
     
-    counter1: process (sysclk, n_Reset) is
+    counter1: process (sysclk) is   --n_reset
     begin
-        if (n_Reset = '0') then
-            int_a <= 0;
-            int_b <= 0;
-        elsif sysclk'event and sysclk='1' then
+        --if (n_Reset = '0') then
+            --int_a <= 0;
+            --int_b <= 0;
+        if sysclk'event and sysclk='1' then
             int_a <= int_a +1;
             int_b <= int_b +1;
         end if; -- clk/rst

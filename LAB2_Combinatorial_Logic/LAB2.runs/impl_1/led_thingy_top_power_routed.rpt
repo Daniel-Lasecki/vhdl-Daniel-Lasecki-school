@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date             : Mon Nov  3 20:27:37 2025
+| Date             : Thu Nov  6 13:42:41 2025
 | Host             : student-VirtualBox running 64-bit Ubuntu 20.04.6 LTS
 | Command          : report_power -file led_thingy_top_power_routed.rpt -pb led_thingy_top_power_summary_routed.pb -rpx led_thingy_top_power_routed.rpx
 | Design           : led_thingy_top
@@ -29,20 +29,20 @@ Table of Contents
 1. Summary
 ----------
 
-+--------------------------+--------------+
-| Total On-Chip Power (W)  | 2.750        |
-| Design Power Budget (W)  | Unspecified* |
-| Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 2.581        |
-| Device Static (W)        | 0.169        |
-| Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 53.3         |
-| Junction Temperature (C) | 56.7         |
-| Confidence Level         | Low          |
-| Setting File             | ---          |
-| Simulation Activity File | ---          |
-| Design Nets Matched      | NA           |
-+--------------------------+--------------+
++--------------------------+---------------------------------+
+| Total On-Chip Power (W)  | 8.748 (Junction temp exceeded!) |
+| Design Power Budget (W)  | Unspecified*                    |
+| Power Budget Margin (W)  | NA                              |
+| Dynamic (W)              | 7.715                           |
+| Device Static (W)        | 1.034                           |
+| Effective TJA (C/W)      | 11.5                            |
+| Max Ambient (C)          | 0.0                             |
+| Junction Temperature (C) | 125.0                           |
+| Confidence Level         | Low                             |
+| Setting File             | ---                             |
+| Simulation Activity File | ---                             |
+| Design Nets Matched      | NA                              |
++--------------------------+---------------------------------+
 * Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
 
 
@@ -54,10 +54,10 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | Slice Logic    |     0.029 |       10 |       --- |             --- |
 |   LUT as Logic |     0.029 |        7 |     53200 |            0.01 |
-| Signals        |     0.059 |       16 |       --- |             --- |
-| I/O            |     2.492 |       16 |       125 |           12.80 |
-| Static Power   |     0.169 |          |           |                 |
-| Total          |     2.750 |          |           |                 |
+| Signals        |     0.089 |       16 |       --- |             --- |
+| I/O            |     7.597 |       16 |       125 |           12.80 |
+| Static Power   |     1.034 |          |           |                 |
+| Total          |     8.748 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -67,20 +67,20 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.137 |       0.112 |      0.025 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.222 |       0.202 |      0.020 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.439 |       0.141 |      0.298 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.377 |       0.278 |      0.100 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     2.145 |       2.144 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vcco18    |       1.800 |     1.170 |       1.169 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccbram   |       1.000 |     0.002 |       0.000 |      0.002 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.021 |       0.000 |      0.021 |       NA    | Unspecified | NA         |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccpint   |       1.000 |     0.046 |       0.000 |      0.046 |       NA    | Unspecified | NA         |
+| Vccpint   |       1.000 |     0.471 |       0.000 |      0.471 |       NA    | Unspecified | NA         |
 | Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |       NA    | Unspecified | NA         |
 | Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |       NA    | Unspecified | NA         |
 | Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -141,7 +141,7 @@ Table of Contents
 +----------------+-----------+
 | Name           | Power (W) |
 +----------------+-----------+
-| led_thingy_top |     2.581 |
+| led_thingy_top |     7.715 |
 +----------------+-----------+
 
 
